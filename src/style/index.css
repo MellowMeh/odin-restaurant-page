@@ -38,10 +38,10 @@ textarea:focus, input:focus {
 
 /*Default CSS Custom Variables*/
 :root {
-    --default-font-size: clamp(2.25rem, 2vw + 1.5rem, 3.25rem);
+    --default-size: clamp(2.25rem, 2vw + 1.5rem, 3.25rem);
     --default-max-inline-size: 66ch;
     --default-line-height: 1.65;
-    --default-font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+    --default-font-family: 'Nimbus Mono PS', 'Courier New', monospace;
     --dark-grey: #1b1b1b;
     --light-grey: #80868B;
     --blue: #4285F4;
@@ -57,6 +57,26 @@ body {
 
 header {
     background-color: var(--white);
+    padding: 0px 2svw;
+    min-height: 70px;
+    display: grid;
+    grid-template-columns: 1fr 20svw;
+    grid-template-areas: "logo nav";
+    justify-items: stretch;
+    align-items: center;
+}
+
+.logo {
+    grid-area: logo;
+    color: var(--blue);
+    font-size: calc(var(--default-size)*1.5);
+    font-family: var(--default-font-family);
+    letter-spacing: -6px;
+    text-transform: capitalize;
+}
+
+nav {
+    grid-area: nav;
 }
 
 #content {
