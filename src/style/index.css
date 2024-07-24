@@ -49,3 +49,17 @@ textarea:focus, input:focus {
 }
 
 /*Webpage Specific Rules*/
+body {
+    background-color: var(--dark-grey);
+    display: grid;
+    grid-template-rows: 12svh 1fr;
+}
+
+header {
+    background-color: var(--white);
+}
+
+#content {
+    background-color: #4285F4;
+}
+
