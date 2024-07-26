@@ -9,13 +9,11 @@ const generateHomePage = (function () {
     generateBackground();
 })();
 
-const buttonActions = () => {
+const buttonActions = (function () {
     homeButton.addEventListener('mousedown', function() {
         clearContent();
     });
     homeButton.addEventListener('mouseup', function() {
         generateBackground();
     });
-};
-
-buttonActions();
+})();
