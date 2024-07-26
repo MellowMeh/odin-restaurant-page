@@ -134,5 +134,33 @@ nav {
     gap: calc(var(--default-size)*0.75);
     font-size: calc(var(--default-size)*0.5);
     font-family: var(--default-font-family);
+    text-transform: capitalize;
 }
 
+.menu-header {
+    color: var(--white);
+    gap: calc(var(--default-size)*0.75);
+    font-size: calc(var(--default-size)*0.75);
+    font-family: var(--default-font-family);
+    text-transform: capitalize;
+}
+
+.menu-item {
+    color: var(--white);
+    gap: calc(var(--default-size)*0.75);
+    font-size: calc(var(--default-size)*0.45);
+    font-family: var(--default-font-family);
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.menu-item-description {
+    color: var(--white);
+    gap: calc(var(--default-size)*0.75);
+    font-size: calc(var(--default-size)*0.35);
+    font-family: var(--default-font-family);
+    text-transform: capitalize;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
