@@ -1,5 +1,7 @@
 import '../style/index.css';
-import { generateBackground, generateLogo, generateNav } from '../modules/homepage-initial-load';
+import {header, nav, homeButton, menuButton, aboutButton, contentContainer} from "../modules/dom-query";
+import { background, generateBackground, generateLogo, generateNav, imageAttribution } from '../modules/homepage-initial-load';
+import { clearContent } from '../modules/clear-content';
 
 const generateHomePage = (function () {
     generateLogo();
@@ -7,3 +9,13 @@ const generateHomePage = (function () {
     generateBackground();
 })();
 
+const buttonActions = () => {
+    homeButton.addEventListener('mousedown', function() {
+        clearContent();
+    });
+    homeButton.addEventListener('mouseup', function() {
+        generateBackground();
+    });
+};
+
+buttonActions();
