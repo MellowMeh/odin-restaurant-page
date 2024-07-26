@@ -1,5 +1,6 @@
 import '../style/index.css';
-import { generateLogo } from '../modules/homepage-initial-load';
+import { generateBackground, generateLogo } from '../modules/homepage-initial-load';
 
 
 generateLogo();
+generateBackground();
