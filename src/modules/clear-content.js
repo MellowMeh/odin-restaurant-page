@@ -1,9 +1,11 @@
 import { contentContainer } from "./dom-query";
 import { background, imageAttribution } from "./homepage-initial-load";
+import { tapasHeader, foodItem } from "./menu-page-load";
 
 let clearContent = () => {
-    contentContainer.removeChild(background);
-    contentContainer.removeChild(imageAttribution);
+    while (contentContainer.firstChild) {
+        contentContainer.removeChild(contentContainer.firstChild);
+    }
 };
 
 export {
