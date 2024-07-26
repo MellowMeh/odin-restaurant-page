@@ -95,6 +95,10 @@ nav {
 }
 
 #content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
     position: relative;
     height: 100%;
     width: 100%;
@@ -115,3 +119,20 @@ nav {
     transform: translate(-50%);
     color: var(--light-grey);
 }
+
+.menu-title {
+    color: var(--white);
+    font-size: calc(var(--default-size)*1);
+    font-family: var(--default-font-family);
+    letter-spacing: -6px;
+    text-transform: capitalize;
+}
+
+.selector-container {
+    display: flex;
+    color: var(--light-grey);
+    gap: calc(var(--default-size)*0.75);
+    font-size: calc(var(--default-size)*0.5);
+    font-family: var(--default-font-family);
+}
+
