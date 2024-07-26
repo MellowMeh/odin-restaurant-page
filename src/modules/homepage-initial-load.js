@@ -10,13 +10,7 @@ const generateLogo = () => {
 const generateNav = () => {
     homeButton.textContent = 'home';
     menuButton.textContent = 'menu';
-    menuButton.onclick = function () {
-        location.href = 'https://www.theodinproject.com/lessons/node-path-javascript-restaurant-page';
-    }
     aboutButton.textContent = 'about';
-    aboutButton.onclick = function () {
-        location.href = 'https://www.theodinproject.com/lessons/node-path-javascript-restaurant-page';
-    }
 }
 
 let background = document.createElement('img');
