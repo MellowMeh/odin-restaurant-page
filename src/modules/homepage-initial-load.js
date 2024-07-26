@@ -7,6 +7,21 @@ const generateLogo = () => {
     header.appendChild(logo);
 }
 
+const generateNav = () => {
+    homeButton.textContent = 'home';
+    homeButton.onclick = function () {
+        location.href = 'https://www.theodinproject.com/lessons/node-path-javascript-restaurant-page';
+    }
+    menuButton.textContent = 'menu';
+    menuButton.onclick = function () {
+        location.href = 'https://www.theodinproject.com/lessons/node-path-javascript-restaurant-page';
+    }
+    aboutButton.textContent = 'about';
+    aboutButton.onclick = function () {
+        location.href = 'https://www.theodinproject.com/lessons/node-path-javascript-restaurant-page';
+    }
+}
+
 const generateBackground = () => {
     let background = document.createElement('img');
     background.src = '../src/image/background.jpg';
@@ -22,5 +37,6 @@ const generateBackground = () => {
 
 export {
     generateLogo,
+    generateNav,
     generateBackground
 };

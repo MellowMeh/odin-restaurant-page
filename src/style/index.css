@@ -60,10 +60,11 @@ header {
     padding: 0px 2svw;
     min-height: 70px;
     display: grid;
-    grid-template-columns: 1fr 20svw;
+    grid-template-columns: 1fr 30svw;
     grid-template-areas: "logo nav";
     justify-items: stretch;
     align-items: center;
+    z-index: 1111;
 }
 
 .logo {
@@ -77,6 +78,20 @@ header {
 
 nav {
     grid-area: nav;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#home,
+#menu,
+#about {
+    font-family: var(--default-font-family);
+    font-size: calc(var(--default-size)*0.6);
+    text-transform: capitalize;
+    background-color: var(--white);
+    color: var(--dark-grey);
 }
 
 #content {

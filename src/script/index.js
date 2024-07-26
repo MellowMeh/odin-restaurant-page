@@ -1,6 +1,7 @@
 import '../style/index.css';
-import { generateBackground, generateLogo } from '../modules/homepage-initial-load';
+import { generateBackground, generateLogo, generateNav } from '../modules/homepage-initial-load';
 
 
 generateLogo();
+generateNav();
 generateBackground();
