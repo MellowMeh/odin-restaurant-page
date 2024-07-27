@@ -1,4 +1,7 @@
 import {header, nav, homeButton, menuButton, aboutButton, contentContainer} from "../modules/dom-query";
+import { clearContent } from "./clear-content";
+import { generateTitleAndSelectors, generateFood, generateDrink, drink, food} from "./menu-page-load";
+import { generateContactList, generateContactUs } from "./about-page-load";
 
 const generateLogo = () => {
     let logo = document.createElement('div');
@@ -27,10 +30,33 @@ const generateBackground = () => {
     contentContainer.appendChild(imageAttribution);
 }
 
+const generateTextOverlay = () => {
+    let menuOverlay = document.createElement('p');
+        menuOverlay.textContent = 'menu'
+        menuOverlay.setAttribute('class', 'menu-overlay');
+        menuOverlay.addEventListener('click', function() {
+            clearContent();
+            generateTitleAndSelectors();
+            generateFood();
+            drink.addEventListener('click', clearContent);
+        })
+        contentContainer.appendChild(menuOverlay);
+    let aboutOverlay = document.createElement('p');
+        aboutOverlay.textContent = 'about'
+        aboutOverlay.setAttribute('class', 'about-overlay');
+        aboutOverlay.addEventListener('click', function() {
+            clearContent();
+            generateContactUs();
+            generateContactList();
+        })
+        contentContainer.appendChild(aboutOverlay);
+}
+ 
 export {
     background,
     imageAttribution,
     generateLogo,
     generateNav,
-    generateBackground
+    generateBackground,
+    generateTextOverlay
 };

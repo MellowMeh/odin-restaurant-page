@@ -1,6 +1,6 @@
 import '../style/index.css';
 import {header, nav, homeButton, menuButton, aboutButton, contentContainer} from "../modules/dom-query";
-import { background, generateBackground, generateLogo, generateNav, imageAttribution } from '../modules/homepage-initial-load';
+import { background, generateBackground, generateLogo, generateNav, generateTextOverlay, imageAttribution } from '../modules/homepage-initial-load';
 import { clearContent } from '../modules/clear-content';
 import { generateTitleAndSelectors, generateFood, generateDrink, food, drink } from '../modules/menu-page-load';
 import { generateContactList, generateContactUs } from '../modules/about-page-load';
@@ -9,6 +9,7 @@ const generateHomePage = (function () {
     generateLogo();
     generateNav();
     generateBackground();
+    generateTextOverlay();
 })();
 
 const buttonActions = (function () {
@@ -17,6 +18,7 @@ const buttonActions = (function () {
         generateLogo();
         generateNav();
         generateBackground();
+        generateTextOverlay();
     });
     menuButton.addEventListener('click', function() {
         clearContent();
