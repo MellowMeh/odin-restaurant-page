@@ -1,8 +1,9 @@
 import '../style/index.css';
 import {header, nav, homeButton, menuButton, aboutButton, contentContainer} from "../modules/dom-query";
 import { background, generateBackground, generateLogo, generateNav, imageAttribution } from '../modules/homepage-initial-load';
-import { clearContent, clearMenu } from '../modules/clear-content';
+import { clearContent } from '../modules/clear-content';
 import { generateTitleAndSelectors, generateFood, generateDrink, food, drink } from '../modules/menu-page-load';
+import { generateContactList, generateContactUs } from '../modules/about-page-load';
 
 const generateHomePage = (function () {
     generateLogo();
@@ -22,5 +23,10 @@ const buttonActions = (function () {
         generateTitleAndSelectors();
         generateFood();
         drink.addEventListener('click', clearContent);
+    })
+    aboutButton.addEventListener('click', function() {
+        clearContent();
+        generateContactUs();
+        generateContactList();
     })
 })();

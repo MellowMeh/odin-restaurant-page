@@ -120,7 +120,8 @@ nav {
     color: var(--light-grey);
 }
 
-.menu-title {
+.menu-title,
+.contact-title {
     color: var(--white);
     font-size: calc(var(--default-size)*1);
     font-family: var(--default-font-family);
@@ -145,7 +146,8 @@ nav {
     text-transform: capitalize;
 }
 
-.menu-item {
+.menu-item,
+.contact-item {
     color: var(--white);
     gap: calc(var(--default-size)*0.75);
     font-size: calc(var(--default-size)*0.45);
@@ -154,7 +156,8 @@ nav {
     text-align: center;
 }
 
-.menu-item-description {
+.menu-item-description,
+.contact-item-description {
     color: var(--white);
     gap: calc(var(--default-size)*0.75);
     font-size: calc(var(--default-size)*0.35);
